@@ -1,0 +1,18 @@
+services:
+  azure-sql-edge:
+    image: mcr.microsoft.com/azure-sql-edge:latest
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=${MSSQL_SA_PASSWORD}
+    ports:
+      - 1433:1433
+    volumes:
+          - database-storage:/var/opt/mssql/
+          - ./backup:/backup:ro
+volumes:
+  database-storage:
+    # volumes:
+    #   - ./data:/var/opt/mssql/data
+    #   - ./log:/var/opt/mssql/log
+    #   - ./secrets:/var/opt/mssql/secrets
+    #   - ./backup:/backup
