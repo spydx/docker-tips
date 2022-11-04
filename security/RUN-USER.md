@@ -10,3 +10,10 @@ RUN useradd -u 8877 john
 USER john
 ```
 
+Run the example:
+
+```sh
+> docker build . -f  Dockerfile.run-user --tag python
+> docker run python
+Whoami: john
+```
