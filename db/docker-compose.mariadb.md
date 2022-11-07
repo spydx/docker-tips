@@ -4,12 +4,18 @@ Most of these settings will work on MySQL databases also.
 
 ## Populating the database
 
-To populate a MariaDB, you have to mount a folder with files to the `/docker-entrypoint-initdb.d` folder.
-This is then run on the first initialization of the container.
+To populate a MariaDB, you have to mount a folder with files to the `/docker-entrypoint-initdb.d` folder and specify the `MARIADB_DATABASE` variable.
+This is then run on the first initialization of the container, importing all the data into the specified database defined in the environment variable `MARIADB_DATABASE`.
 The files are run in alphabetical order, and with this in mind, you can organize how things are imported.
 
+Supported filetypes:
 
-When a container is started for the first time, a new database with the specified name will be created and initialized with the provided configuration variables. Furthermore, it will execute files with extensions .sh, .sql, .sql.gz, .sql.xz and .sql.zst that are found in /docker-entrypoint-initdb.d. Files will be executed in alphabetical order. .sh files without file execute permission are sourced rather than executed. You can easily populate your mariadb services by mounting a SQL dump into that directory and provide custom images with contributed data. SQL files will be imported by default to the database specified by the MARIADB_DATABASE / MYSQL_DATABASE variable.
+- `.sh`
+  A note about `.sh` files is that they are sourced if the execute flag is omitted on the file.
+- `.sql`
+- `.sql.gz`
+- `.sql.xz`
+- `.sql.zst`
 
 Source:
 [MariaDB@DockerHub](https://hub.docker.com/_/mariadb)
