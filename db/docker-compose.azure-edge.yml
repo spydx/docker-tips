@@ -9,7 +9,7 @@ services:
       - 1433:1433
     volumes:
           - database-storage:/var/opt/mssql/
-          - ./backup:/backup:ro
+          - ./azure-edge:/backup:ro
 volumes:
   database-storage:
     # volumes:

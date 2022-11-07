@@ -1,0 +1,12 @@
+services:
+  maria-database:
+    image: mariadb:latest
+    environment:
+      - MARIADB_DATABASE=YourDatabaseName
+      - MARIADB_ROOT_PASSWORD=SuperSecretPassword
+      - MARIADB_USER=YourUser
+      - MARIADB_PASSWORD=SecretPassword
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mariadb:/docker-entrypoint-initdb.d:ro
