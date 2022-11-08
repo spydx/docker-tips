@@ -10,6 +10,10 @@ This relives some work when importing a clean database, e.g. you can do `docker-
 
 You can further, in the commented-out section specify the data locations so you can have direct access to the database if needed.
 
+## Example
+
+[Azure Edge](./docker-compose.azure-edge.yml)
+
 ## Sources
 
 [Configure Azure Edge Sql using Environment variables](https://learn.microsoft.com/en-us/azure/azure-sql-edge/configure#configure-by-using-environment-variables)

@@ -17,6 +17,10 @@ Supported filetypes:
 - `.sql.xz`
 - `.sql.zst`
 
+## Example
+
+[MariaDB](./docker-compose.mariadb.yml)
+
 Source:
 [MariaDB@DockerHub](https://hub.docker.com/_/mariadb)
 [MySQL@DockerHub](https://hub.docker.com/_/mysql)
