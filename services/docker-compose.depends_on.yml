@@ -1,0 +1,7 @@
+services:
+  redis-cache:
+    image: redis
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongodb:latest

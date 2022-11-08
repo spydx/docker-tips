@@ -11,6 +11,12 @@ E.g. in the folder `db` you will find `azure-edge` and `mariadb`
 
 - [Database]
   - [Azure-Edge](./db/docker-compose.azure-edge.md)
+  - [Azure-Edge](./db/docker-compose.azure-edge.yml)
   - [MariaDB](./db/docker-compose.mariadb.md)
+  - [MariaDB Example](./db/docker-compose.mariadb.yml)
 - [Security](./security/)
   - [run-as-user](./security/RUN-USER.md)
+  - [run-as-user Example](./security/Dockerfile.run-user)
+- [Services]
+  - [Depends-On](./services/docker-compose.depends_on.md)
+  - [Depends-On Example](./services/docker-compose.depends_on.yml)
